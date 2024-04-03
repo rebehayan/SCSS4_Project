@@ -1,0 +1,42 @@
+.title {
+  font-size: $size32;
+  line-height: $size32;
+  font-weight: $bold700;
+  letter-spacing: 0.5px;
+}
+.sub__title {
+  font-size: $size24;
+  line-height: $size32;
+  letter-spacing: -1px;
+  color: $blue00;
+}
+.sub__title__description{
+  display: flex;
+  flex-direction: column;
+  gap: $size20;
+  > li {
+    font-size: $size18;
+    line-height: $size32;
+    letter-spacing: -1px;
+    color: $gray77;
+  }
+  .subject__introduce {
+    color: $gray33;
+    font-size: $size14;
+    font-weight: $bold700;
+    letter-spacing: -0.5px;
+    line-height: $size20;
+    > a {
+    padding: 16px 20px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 135px;
+    border: 1px solid $graybd;
+    &::after {
+      content: url(/images/ico_arrow_gray.svg);
+    }
+    }
+  }
+}
