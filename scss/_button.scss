@@ -1,0 +1,20 @@
+.btn-introduction{
+    display: inline-flex;
+    align-items: center;
+    gap: 16px;
+    height: 52px;
+    padding: 16px 24px;
+    border: 1px solid $graybd;
+    box-sizing: border-box;
+    color: $gray33;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: -0.5px;
+    &::after{
+        content: '';
+        width: 8px;
+        height: 13px;
+        @include background('ico_arrow_right_black.svg', center, contain);
+    }
+}

@@ -1,0 +1,19 @@
+*{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+}
+body{
+  padding: 30px;
+  @include tablet{
+    padding: 30px 0;
+  }
+}
+a{
+  color: inherit;
+}
+button{
+    border: none;
+    background-color: transparent;
+}

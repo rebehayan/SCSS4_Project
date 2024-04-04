@@ -1,0 +1,21 @@
+// Heading
+$headingSize : xl 40px 40px, lg 32px 32px, md 20px normal, sm 14px normal;
+@each $class, $fontSize, $lineHeight in $headingSize {
+    .heading.#{$class}{
+        font-size: $fontSize;
+        line-height: $lineHeight;
+    }
+}
+.heading{
+    &.lighter{
+        font-weight: 250;
+    }
+}
+
+// Text Point Color
+$pointColor : blue $blue00, gray $gray77, yellow $yellow;
+@each $class, $color in $pointColor {
+    .point-color.#{$class}{
+        color: $color;
+    }
+}
