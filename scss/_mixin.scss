@@ -1,0 +1,23 @@
+//Responsive
+$mobileSize : 768px;
+$tabletSize : 1024px;
+@mixin mobile {
+    @media (width < $mobileSize) {
+        @content;
+    }
+}
+@mixin tablet {
+    @media (width <= $tabletSize) {
+        @content;
+    }
+}
+@mixin pc {
+    @media (width > $tabletSize) {
+        @content;
+    }
+}
+
+//Background Image
+@mixin background($image, $position:null, $size:null, $color:null) {
+    background: url(#{$imgUrl}#{$image}) no-repeat $position / $size , $color;
+}
