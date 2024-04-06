@@ -1,0 +1,73 @@
+$card: title 700 $size20 $size20 -5% $gray00, subTitle 500 $size14 $size20 -5%;
+
+@each $class, $thickNess, $fontSize, $lineHeight, $letterSpacing,$color in $card {
+  .list__card-#{$class} {
+    font-weight: $thickNess;
+    font-size: $fontSize;
+    line-height: $lineHeight;
+    letter-spacing: $letterSpacing;
+    color: $color;
+  }
+}
+
+.list {
+  &-type1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap:24px;
+    max-width: 1260px;
+  }
+  &__card {
+    width: 288px;
+    height: 194px;
+    border: 1px solid $graye0;
+    background-color: $whiteff;
+    padding: 30px;
+    box-sizing: border-box;
+    > a{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 16px;
+      > img {
+        width: 36px;
+        height: 36px;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+@media (width < 700px) {
+  .list {
+    &-type1 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap:20px;
+      max-width: 700px;
+    }
+    &__card {
+      width: 320px;
+      height: 230px;
+      > a{
+        align-items: center;
+        gap: 16px;
+        > img {
+          width: 44px;
+          height: 44px;
+        }
+      }
+      &-title {
+        font-size: $size28;
+        line-height: $size28;
+      }
+      &-subTitle {
+        font-weight: 400;
+        font-size: $size20;
+        line-height: 29px;
+        letter-spacing: -5%;
+      }
+    }
+  }
+  
+}
